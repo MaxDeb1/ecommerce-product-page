@@ -13,7 +13,7 @@ import Collections from './pages/Collections';
 function App() {
   return (
     <div className='App'>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Collections />} />
