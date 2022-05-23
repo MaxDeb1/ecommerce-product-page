@@ -1,0 +1,57 @@
+.navbar {
+    ul {
+      gap: 33px;
+    }
+
+    li {
+      padding-top: 4px;
+      border-bottom: 4px solid transparent;
+      line-height: 110px;
+      transition: all 0.25s ease 0s;
+
+      &:hover {
+        border-bottom: 4px solid $Orange;
+        color: $Title;
+      }
+    }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    display: none;
+
+    &.active {
+      display : block;
+      position: absolute;
+      width: 100%;
+      padding-left: 25px;
+      background-color: $White;
+      background: linear-gradient(90deg, $White 66.66%, rgba(0,0,0,0.77) 66.66%);
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+
+    ul {
+      margin-top: 88px;
+
+      &.flex {
+        display: inline-block;
+      }
+    }
+
+    li {
+      display: block;
+      margin-bottom: 1rem;
+      border-bottom: 4px solid transparent;
+      line-height: 1.32rem;
+
+      a {
+        color: $Title;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

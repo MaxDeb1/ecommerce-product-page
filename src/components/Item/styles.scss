@@ -1,0 +1,130 @@
+.item-details {
+    width: 50%;
+    margin-right: 47px;
+
+    .item-brand {
+        color: $Orange;
+        font-weight: 600;
+    }
+
+    h1 {
+        margin-top: 0.8rem;
+        font-size: 2.8rem;
+        line-height: 3rem;
+        color: $Black;
+    }
+
+    p {
+        margin: 18px 0 25px;
+    }
+
+    .sell-price {
+        gap: 1rem;
+
+        .reduced-price {
+        font-size: 1.8rem;
+        }
+
+        .discount {
+        padding: 0 8px;
+        color: $Orange;
+        background-color: $Orange_Light;
+        border-radius: 5px;
+        }
+    }
+
+    .original-price {
+        color: $StrikeThrough;
+        font-weight: 700;
+        text-decoration: line-through;
+    }
+
+    .item-selection {
+        gap: 1rem;
+        margin-top: 35px;
+
+        .quantity {
+        width:50%;
+        height: 56px;
+        border-radius: 10px;
+        justify-content: space-between;
+        background-color: $Light;
+
+        > * {
+            width: 33.33%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+        }
+        }
+
+        .selector {
+        cursor: pointer;
+        }
+
+        .primary-btn {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+
+            img {
+                filter: brightness(0%) invert(100%);
+            }
+
+            &:hover {
+                opacity: 0.6;
+                box-shadow: 0px 13px 35px -10px $Orange;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .item-details {
+        width: 100%;
+        padding: 21px 6.4%;
+
+        .item-brand {
+            font-size: 0.75rem;
+            letter-spacing: 0.1rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            line-height: 2rem;
+        }
+
+        p {
+            margin: 18px 0 20px;
+            font-size: 0.95rem;
+            line-height: 1.56rem;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .item-selection {
+            display: grid;
+            margin-top: 20px;
+
+            .quantity {
+                width: 100%;
+            }
+        }
+
+        .primary-btn {
+            box-shadow: 0px 13px 35px -15px $Orange;
+        }
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1300px) {
+    .item-details {
+        width: 100%;
+        padding: 21px 15vw;
+        margin: 0 auto;
+    }
+}

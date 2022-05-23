@@ -1,0 +1,14 @@
+//general conf and vars
+@import "./_conf";
+@import "../../default";
+
+//components
+@import "../../components/Header/styles.scss";
+@import "../../components/Navigation/styles.scss";
+@import "../../components/Cart/styles.scss";
+@import "../../components/ImageGallery/styles.scss";
+@import "../../components/Modal/styles.scss";
+@import "../../components/Item/styles.scss";
+
+//pages
+@import "../../pages/Collections/styles.scss";

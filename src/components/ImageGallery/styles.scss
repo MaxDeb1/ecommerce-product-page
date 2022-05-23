@@ -1,0 +1,118 @@
+.gallery-container {
+    position: relative;
+	width: 50%;
+    height: 100%;
+	margin:0 auto;
+	display:table;
+	margin-left: 45px;
+
+    .featured-wrapper {
+        width:445px;
+        height:445px;
+        border-radius: 20px;
+    }
+
+    .thumb-list {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        img {
+            width: 88px;
+            height: 88px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &.active {
+                border: 2px solid $Orange;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-radius: 20px;
+    overflow:hidden;
+    cursor: pointer;
+
+    img {
+        border-radius: 20px;
+        z-index: 1;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .left-arrow {
+        left: -28px;
+    }
+
+    .right-arrow {
+        right: -28px;
+    }
+
+    .slide {
+        display: none;
+/*         opacity: 0; 
+        transition-duration: 1s ease; */
+
+        &.active {
+            display: block;
+/*             opacity: 1;
+            transition-duration: 1s; */
+
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery-container {
+        width: 100%;
+        margin: 0;
+
+        .thumb-list {
+            display: none;
+        }
+    }
+
+    .slider {
+        height: 80vw;
+        border-radius: 0px;
+
+        .arrow {
+            position: absolute;
+            display: grid;
+            place-items: center;
+            width: 40px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            background-color: $White;
+            top: calc(50% -28px);
+            z-index: 2;
+        }
+
+        .left-arrow {
+            left: 16px;
+        }
+    
+        .right-arrow {
+            right: 16px;
+        }
+        
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1300px) {
+    .gallery-container {
+        width: 100%;
+        margin: 0;
+        padding: 0 15vw;
+    }
+}
