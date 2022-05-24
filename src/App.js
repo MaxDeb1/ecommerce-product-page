@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Hashrouter, Routes, Route } from "react-router-dom";
 /** Layouts **/
 import MainLayout from './layouts/MainLayout';
 /** Components **/
@@ -13,7 +13,7 @@ import Collections from './pages/Collections';
 function App() {
   return (
     <div className='App'>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Hashrouter basename="{.}">
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Collections />} />
@@ -31,7 +31,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
-      </Router>
+      </Hashrouter>
     </div>
   );
 }
