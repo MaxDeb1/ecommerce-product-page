@@ -1,5 +1,7 @@
 # Frontend Mentor - E-commerce product page
 
+[Open Live site](https://graceful-strudel-6eea81.netlify.app/)
+
 ![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
